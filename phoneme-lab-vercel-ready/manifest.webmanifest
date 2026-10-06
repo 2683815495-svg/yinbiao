@@ -1,0 +1,20 @@
+{
+  "name": "Phoneme Lab · 英语音标实验室",
+  "short_name": "Phoneme Lab",
+  "description": "RP British English pronunciation training.",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A0C12",
+  "theme_color": "#0A0C12",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
