@@ -1,5 +1,0 @@
-import {create} from "zustand"; import {persist} from "zustand/middleware";
-type State={progress:Record<string,number>;mistakes:string[];streak:number;accent:"en-GB"|"en-US";speed:number;sfx:boolean;zh:boolean;motion:boolean;addResult:(s:string,ok:boolean)=>void;reset:()=>void;toggleMistake:(s:string)=>void;set:(k:string,v:any)=>void};
-export const useStore=create<State>()(persist((set)=>({progress:{},mistakes:[],streak:0,accent:"en-GB",speed:1,sfx:true,zh:true,motion:true,
-addResult:(s,ok)=>set(st=>{const old=st.progress[s]??0; const next=Math.max(0,Math.min(5,old+(ok?0.5:-0.25))); return {progress:{...st.progress,[s]:next},streak:ok?st.streak+1:0,mistakes:ok?st.mistakes.filter(x=>x!==s):Array.from(new Set([...st.mistakes,s]))}}),
-reset:()=>set({progress:{},mistakes:[],streak:0}),toggleMistake:s=>set(st=>({mistakes:st.mistakes.includes(s)?st.mistakes.filter(x=>x!==s):[...st.mistakes,s]})),set:(k,v)=>set({[k]:v} as any)}),{name:"phoneme-lab-v1"}));

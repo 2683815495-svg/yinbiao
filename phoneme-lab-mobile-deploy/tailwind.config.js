@@ -1,1 +1,0 @@
-export default {content:["./index.html","./src/**/*.{ts,tsx}"],theme:{extend:{fontFamily:{ipa:["Charis SIL","Doulos SIL","Noto Sans IPA","serif"]},boxShadow:{sticker:"0 5px 0 rgba(0,0,0,.35),0 0 24px rgba(78,224,192,.12)"}}},plugins:[]};
